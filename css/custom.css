@@ -1,0 +1,419 @@
+/* SAOUI字体精简包，仅73KB */
+/* @font-face {
+  font-family: 'SAOUI';
+  src: url('https://assets.akilar.top/fonts/SAOUI.ttf');
+  font-display: swap;
+} */
+
+@import "//at.alicdn.com/t/c/font_3689557_qmwy1xfta8a.css";
+
+/* 应用于除了作者卡片以为的所有侧栏卡片 */
+.card-widget:not(.card-info) {
+  overflow: visible !important;
+  margin-top: 45px !important;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 0px !important;
+  /* font-family: 'SAOUI'; */
+  color: rgba(60, 60, 61, 0.7);
+  font-weight: bold;
+}
+
+/* 修复一下对侧栏电子钟的覆盖 */
+.card-widget.card-clock {
+  overflow: hidden !important;
+  border-radius: 8px !important;
+  margin-top: 0px !important;
+}
+
+/* 定义标题栏的定位方式为绝对定位 */
+.item-headline {
+  /* font-family: 'SAOUI'; */
+  color: rgba(60, 60, 61, 0.7);
+  font-weight: bold;
+  position: absolute;
+  z-index: 4;
+  height: 27px;
+  width: 65%;
+  top: -27px;
+  left: 7px;
+}
+
+/* 标题栏下各元素的层级，保证它们能显示在伪类之上 */
+.item-headline i {
+  position: relative;
+  top: 0px;
+  margin-left: 5%;
+  z-index: 2;
+}
+
+.item-headline span {
+  position: relative;
+  top: 0px;
+  z-index: 2;
+}
+
+.item-headline a {
+  position: relative;
+  top: 0px;
+  z-index: 2;
+}
+
+/* 梯形伪类 */
+.item-headline:after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  /*卡片顶部突起上下偏移量*/
+  right: 0;
+  bottom: 0;
+  left: -3px;
+  /*卡片顶部突起左右偏移量*/
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-bottom: 0 solid #fff;
+  /* 关键形变 */
+  transform: perspective(20px) rotateX(3deg);
+  border-top-right-radius: 5px !important;
+  border-top-left-radius: 5px !important;
+}
+
+/* 下划线伪类 */
+.item-headline:before {
+  display: block;
+  width: 140%;
+  margin-top: 2px;
+  height: 2px;
+  content: '';
+  background: rgba(160, 159, 160, 0.9);
+  border-radius: 5px;
+  top: 40px;
+  left: 0;
+  position: relative;
+}
+
+/* 针对手机样式的偏移量调整 */
+@media screen and (max-width: 800px) {
+  .item-headline {
+    left: 8px;
+  }
+}
+
+/* 夜间模式色彩适配，此处仅代表糖果屋夜间模式配色 */
+[data-theme="dark"] .card-widget:not(.card-info) {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+[data-theme="dark"] .item-headline {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+[data-theme="dark"] .item-headline:after {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 0 solid rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .item-headline:before {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+#web_bg {
+  background: -webkit-linear-gradient(0deg,
+      rgba(247, 149, 51, 0.1) 0,
+      rgba(243, 112, 85, 0.1) 15%,
+      rgba(239, 78, 123, 0.1) 30%,
+      rgba(161, 102, 171, 0.1) 44%,
+      rgba(80, 115, 184, 0.1) 58%,
+      rgba(16, 152, 173, 0.1) 72%,
+      rgba(7, 179, 155, 0.1) 86%,
+      rgba(109, 186, 130, 0.1) 100%);
+  background: -moz-linear-gradient(0deg,
+      rgba(247, 149, 51, 0.1) 0,
+      rgba(243, 112, 85, 0.1) 15%,
+      rgba(239, 78, 123, 0.1) 30%,
+      rgba(161, 102, 171, 0.1) 44%,
+      rgba(80, 115, 184, 0.1) 58%,
+      rgba(16, 152, 173, 0.1) 72%,
+      rgba(7, 179, 155, 0.1) 86%,
+      rgba(109, 186, 130, 0.1) 100%);
+  background: -o-linear-gradient(0deg,
+      rgba(247, 149, 51, 0.1) 0,
+      rgba(243, 112, 85, 0.1) 15%,
+      rgba(239, 78, 123, 0.1) 30%,
+      rgba(161, 102, 171, 0.1) 44%,
+      rgba(80, 115, 184, 0.1) 58%,
+      rgba(16, 152, 173, 0.1) 72%,
+      rgba(7, 179, 155, 0.1) 86%,
+      rgba(109, 186, 130, 0.1) 100%);
+  background: -ms-linear-gradient(0deg,
+      rgba(247, 149, 51, 0.1) 0,
+      rgba(243, 112, 85, 0.1) 15%,
+      rgba(239, 78, 123, 0.1) 30%,
+      rgba(161, 102, 171, 0.1) 44%,
+      rgba(80, 115, 184, 0.1) 58%,
+      rgba(16, 152, 173, 0.1) 72%,
+      rgba(7, 179, 155, 0.1) 86%,
+      rgba(109, 186, 130, 0.1) 100%);
+  background: linear-gradient(45deg,
+      rgba(247, 149, 51, 0.5) 0,
+      rgba(243, 112, 85, 0.5) 15%,
+      rgba(239, 78, 123, 0.5) 30%,
+      rgba(161, 102, 171, 0.5) 44%,
+      rgba(80, 115, 184, 0.5) 58%,
+      rgba(16, 152, 173, 0.5) 72%,
+      rgba(7, 179, 155, 0.5) 86%,
+      rgba(109, 186, 130, 0.5) 100%);
+}
+
+#footer {
+  background: -webkit-linear-gradient(0deg,
+      rgba(247, 149, 51, 0.1) 0,
+      rgba(243, 112, 85, 0.1) 15%,
+      rgba(239, 78, 123, 0.1) 30%,
+      rgba(161, 102, 171, 0.1) 44%,
+      rgba(80, 115, 184, 0.1) 58%,
+      rgba(16, 152, 173, 0.1) 72%,
+      rgba(7, 179, 155, 0.1) 86%,
+      rgba(109, 186, 130, 0.1) 100%);
+  background: -moz-linear-gradient(0deg,
+      rgba(247, 149, 51, 0.1) 0,
+      rgba(243, 112, 85, 0.1) 15%,
+      rgba(239, 78, 123, 0.1) 30%,
+      rgba(161, 102, 171, 0.1) 44%,
+      rgba(80, 115, 184, 0.1) 58%,
+      rgba(16, 152, 173, 0.1) 72%,
+      rgba(7, 179, 155, 0.1) 86%,
+      rgba(109, 186, 130, 0.1) 100%);
+  background: -o-linear-gradient(0deg,
+      rgba(247, 149, 51, 0.1) 0,
+      rgba(243, 112, 85, 0.1) 15%,
+      rgba(239, 78, 123, 0.1) 30%,
+      rgba(161, 102, 171, 0.1) 44%,
+      rgba(80, 115, 184, 0.1) 58%,
+      rgba(16, 152, 173, 0.1) 72%,
+      rgba(7, 179, 155, 0.1) 86%,
+      rgba(109, 186, 130, 0.1) 100%);
+  background: -ms-linear-gradient(0deg,
+      rgba(247, 149, 51, 0.1) 0,
+      rgba(243, 112, 85, 0.1) 15%,
+      rgba(239, 78, 123, 0.1) 30%,
+      rgba(161, 102, 171, 0.1) 44%,
+      rgba(80, 115, 184, 0.1) 58%,
+      rgba(16, 152, 173, 0.1) 72%,
+      rgba(7, 179, 155, 0.1) 86%,
+      rgba(109, 186, 130, 0.1) 100%);
+  background: linear-gradient(135deg,
+      rgba(247, 149, 51, 0.5) 0,
+      rgba(243, 112, 85, 0.5) 15%,
+      rgba(239, 78, 123, 0.5) 30%,
+      rgba(161, 102, 171, 0.5) 44%,
+      rgba(80, 115, 184, 0.5) 58%,
+      rgba(16, 152, 173, 0.5) 72%,
+      rgba(7, 179, 155, 0.5) 86%,
+      rgba(109, 186, 130, 0.5) 100%);
+}
+
+/* 鼠标样式 */
+body {
+  cursor: url('/cur/移动.cur'), auto;
+}
+
+.hide-block>.hide-button.open,
+.hide-inline>.hide-button.open {
+  display: block
+}
+
+a,
+button,
+img {
+  cursor: url('/cur/链接选择.cur'), auto
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 2em;
+  background-color: rgba(73, 177, 245, .2);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(255 255 255 / .3);
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);
+  border-radius: 2em
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent
+}
+
+/* 标题样式 */
+#article-container h1:before,
+#article-container h2:before,
+#article-container h3:before,
+#article-container h4:before,
+#article-container h5:before,
+#article-container h6:before,
+#post .post-outdate-notice:before,
+.fontawesomeIcon,
+.note:not(.no-icon)::before,
+hr:before {
+  display: inline-block;
+  font-weight: 600;
+  font-style: normal;
+  font-variant: normal;
+  font-family: 'Font Awesome 5 Free';
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased
+}
+
+#article-container h1:before,
+#article-container h2:before,
+#article-container h3:before,
+#article-container h4:before,
+#article-container h5:before,
+#article-container h6:before {
+  position: absolute;
+  color: #f47466;
+  /* 回形针 */
+  content: '\f0c1';
+  line-height: 1;
+  -webkit-transition: all .2s ease-out;
+  -moz-transition: all .2s ease-out;
+  -o-transition: all .2s ease-out;
+  -ms-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  /* 若要使用风车效果，请去掉下面的注释 */
+  content: '\f863';
+  animation: avatar_turn_around 1s linear infinite;
+}
+
+#article-container h1 {
+  padding-left: 1.4rem
+}
+
+#article-container h1 code {
+  font-size: 1rem
+}
+
+#article-container h1:before {
+  margin-left: -1.3rem;
+  top: calc(50% - .5rem);
+  font-size: 1rem
+}
+
+#article-container h1:hover {
+  padding-left: 1.6rem
+}
+
+#article-container h2 {
+  padding-left: 1.3rem
+}
+
+#article-container h2 code {
+  font-size: .9rem
+}
+
+#article-container h2:before {
+  margin-left: -1.4rem;
+  top: calc(50% - .45rem);
+  font-size: .9rem
+}
+
+#article-container h2:hover {
+  padding-left: 1.5rem
+}
+
+#article-container h3 {
+  padding-left: 1.2rem
+}
+
+#article-container h3 code {
+  font-size: .8rem;
+  top: calc(50% - .4rem);
+
+}
+
+#article-container h3:before {
+  margin-left: -1.2rem;
+  top: calc(50% - .4rem);
+  font-size: .8rem
+}
+
+#article-container h3:hover {
+  padding-left: 1.4rem
+}
+
+#article-container h4 {
+  padding-left: 1.1rem
+}
+
+#article-container h4 code {
+  font-size: .7rem
+}
+
+#article-container h4:before {
+  margin-left: -1rem;
+  top: calc(50% - .35rem);
+  font-size: .7rem
+}
+
+#article-container h4:hover {
+  padding-left: 1.3rem
+}
+
+#article-container h5 {
+  padding-left: 1rem
+}
+
+#article-container h5 code {
+  font-size: .6rem
+}
+
+#article-container h5:before {
+  margin-left: -.8rem;
+  top: calc(50% - .3rem);
+  font-size: .6rem
+}
+
+#article-container h5:hover {
+  padding-left: 1.2rem
+}
+
+#article-container h6 {
+  padding-left: 1rem
+}
+
+#article-container h6 code {
+  font-size: .6rem
+}
+
+#article-container h6:before {
+  margin-left: -.8rem;
+  top: calc(50% - .3rem);
+  font-size: .6rem
+}
+
+#article-container h6:hover {
+  padding-left: 1.2rem
+}
+
+/* 更改字体 */
+@font-face {
+  font-family: 'tzy';
+  /* 字体名自定义即可 */
+  src: url('/fonts/甜甜圈海报字体.ttf');
+  /* 字体文件路径 */
+  font-display: swap;
+}
+
+body,
+.gitcalendar {
+  font-family: tzy !important;
+}
