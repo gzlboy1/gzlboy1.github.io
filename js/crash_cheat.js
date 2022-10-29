@@ -62,12 +62,12 @@ if (document.querySelector('.fa-qq')) {
 }
 
 // 禁止F12
-// document.onkeydown = function (event) {
-//   if (window.event && window.event.keyCode == 123) {
-//     event.preventDefault();
-//     c_notify('你干嘛~哎哟~', '不能打开哦', 'error')
-//     return false;
-//     // event.keyCode = 0;
-//     // event.returnValue = false;
-//   }
-// }
+document.onkeydown = function (event) {
+  if (window.event && window.event.keyCode == 123) {
+    event.preventDefault();
+    c_notify('你干嘛~哎哟~', '不能打开哦', 'error')
+    return false;
+    // event.keyCode = 0;
+    // event.returnValue = false;
+  }
+}
