@@ -30,26 +30,12 @@ function c_notify(title, message = '', type = 'success') {
     }
   })
 }
+
 // 复制提醒
 document.addEventListener("copy", function (e) {
   c_notify("嘿嘿嘿！复制成功", "若要转载请务必保留原文链接！~\(≥▽≤)/~  ")
 })
 
-// 自定义事件：分享事件，shareEvent在window中
-var shareEvent = new CustomEvent('share', {
-  detail: {},
-});
-window.addEventListener('share', function (event) {
-  c_notify("嘿嘿嘿！复制本页链接地址成功")
-});
-
-// 自定义copy事件
-var copyEvent = new CustomEvent('copy2', {
-  detail: {},
-});
-window.addEventListener('copy2', function (event) {
-  c_notify("嘿嘿嘿！复制成功", "若要转载请务必保留原文链接！~\(≥▽≤)/~  ")
-});
 
 // 侧边栏qq按钮
 if (document.querySelector('.fa-qq')) {

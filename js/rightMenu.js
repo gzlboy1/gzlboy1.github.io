@@ -225,11 +225,7 @@ $("#menu-copy").on("click", function () {
   // 复制内容
   // document.execCommand("Copy")
   navigator.clipboard.writeText(selectTextNow)
-  if (window.dispatchEvent) {
-    window.dispatchEvent(window.copyEvent);
-  } else {
-    window.fireEvent(window.copyEvent);
-  }
+  window.c_notify("嘿嘿嘿！复制成功", "若要转载请务必保留原文链接！~\(≥▽≤)/~  ")
 });
 
 // 百度搜索
@@ -242,10 +238,5 @@ $("#menu-search").on("click", function () {
 $("#menu-share").on("click", function () {
   removeRightMenu();
   navigator.clipboard.writeText(window.location.href)
-  // 随后在对应的元素上触发该事件
-  if (window.dispatchEvent) {
-    window.dispatchEvent(window.shareEvent);
-  } else {
-    window.fireEvent(window.shareEvent);
-  }
+  window.c_notify("嘿嘿嘿！复制本页链接地址成功")
 });
